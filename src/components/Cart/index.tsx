@@ -77,6 +77,7 @@ const Cart = () => {
           >
             <h1>Go shopping!</h1>
             <Image height={100} width={100} alt="cart" src={cartIcon} />
+            <span onClick={() => dispatch(closeCart())}>Fechar Carrinho</span>
           </EmptyStyled>
         ) : (
           <>

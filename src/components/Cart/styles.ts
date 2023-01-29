@@ -94,9 +94,24 @@ export const EmptyStyled = styled(motion.div)`
     text-align: center;
   }
 
-  svg {
-    font-size: 10rem;
-    color: ${({ theme }) => theme.colors.alert};
+  span {
+    display: none;
+  }
+
+  @media screen and (max-width: 1024px) {
+    span {
+      background: ${({ theme }) => theme.colors.price};
+      color: ${({ theme }) => theme.colors.secondary};
+      width: 204px;
+      height: 40px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
   }
 `;
 
