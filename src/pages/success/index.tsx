@@ -3,7 +3,6 @@ import Link from "next/link";
 import React from "react";
 import { Container, Icon, Text } from "../../styles/Success";
 import check from "../../../public/success.png";
-import { Footer } from "@/components/Footer/index";
 
 const Success = () => {
   return (
@@ -24,7 +23,6 @@ const Success = () => {
           <span>Voltar para o início</span>
         </Link>
       </Container>
-      <Footer />
     </>
   );
 };

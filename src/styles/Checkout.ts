@@ -23,7 +23,7 @@ export const CheckoutInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 20px;
+  margin: 26px 0;
 `;
 
 export const CartItem = styled.div`

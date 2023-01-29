@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
-  width: 325px;
-  margin: 12px 0;
+  width: 350px;
+  margin: 12px 0 12px 30px;
   height: 100px;
   display: flex;
   flex-direction: row;
