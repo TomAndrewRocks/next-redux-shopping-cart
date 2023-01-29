@@ -1,10 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useMemo, useState } from "react";
-import {
-  InitialState,
-  PayPalButtons,
-  PayPalButtonsComponentProps,
-} from "@paypal/react-paypal-js";
+import React, { useMemo, useState, useEffect } from "react";
+import { PayPalButtons } from "@paypal/react-paypal-js";
 import {
   Button,
   CartItem,
@@ -61,6 +57,12 @@ const Checkout = () => {
     const rawPrice = totalPrice / 100;
     return { formattedPrice, rawPrice, totalQuantity };
   }, []);
+
+  useEffect(() => {
+    if (cartItems.length === 0) {
+      router.push("/");
+    }
+  }, [cartItems]);
 
   return (
     <>

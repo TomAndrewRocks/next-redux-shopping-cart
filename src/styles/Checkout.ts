@@ -14,9 +14,18 @@ export const Container = styled.div`
 export const Payment = styled.div`
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 30%;
   gap: 10px;
   margin: 30px 0;
+
+  @media screen and (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 80%;
+  }
+
 `;
 
 export const CheckoutInfo = styled.div`

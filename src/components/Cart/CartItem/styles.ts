@@ -11,6 +11,21 @@ export const Container = styled.div`
   justify-content: space-between;
   border-radius: 8px;
   padding: 0 0.5rem 0 0.1rem;
+
+  @media screen and (max-width: 1024px) {
+    width: 500px;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 350px;
+  }
+
+  @media screen and (max-width: 414px) {
+    width: 300px;
+    flex-direction: column;
+    height:200px;
+    padding: 10px 0 30px;
+  }
 `;
 
 export const Title = styled.h3`
