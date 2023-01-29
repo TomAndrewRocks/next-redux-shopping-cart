@@ -8,13 +8,25 @@ export const ProductArea = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    margin: 100px 0;
+    height: 100vh;
+  }
 `;
 export const Title = styled.h2`
   color: #000;
+  text-align: center;
 `;
 
 export const ImgContainer = styled.div``;
-export const Description = styled.span``;
+export const Description = styled.span`
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    text-align: center;
+  }
+`;
 export const Price = styled.span`
   margin-top: 16px;
 `;
@@ -54,4 +66,8 @@ export const FinalStep = styled.div`
   align-items: center;
   width: 100%;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
