@@ -16,7 +16,7 @@ import {
   Info,
   ImgContainer,
   FinalStep,
-} from "./styles";
+} from "../../styles/Products";
 import bagIcon from "../../../public/bag.svg";
 import { useDispatch } from "react-redux";
 import { addToCart, cartItemsLength } from "@/contexts/counterReducer";

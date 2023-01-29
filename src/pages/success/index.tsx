@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Container, Icon, Text } from "./styles";
+import { Container, Icon, Text } from "../../styles/Success";
 import check from "../../../public/success.png";
 import { Footer } from "@/components/Footer/index";
 

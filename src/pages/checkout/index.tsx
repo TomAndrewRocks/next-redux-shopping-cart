@@ -16,10 +16,10 @@ import {
   Qty,
   SubTotal,
   Title,
-} from "./styles";
+} from "../../styles/Checkout";
 import { useSelector } from "react-redux";
 import { cartItemsLength, clearCart } from "@/contexts/counterReducer";
-import { CheckoutInfo } from "./styles";
+import { CheckoutInfo } from "../../styles/Checkout";
 import { IProduct } from "@/interfaces/IProduct";
 import Image from "next/image";
 import formatMoney from "@/services/formatMoney";
