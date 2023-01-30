@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useCallback } from "react";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import {
   Button,
@@ -64,6 +64,10 @@ const Checkout = () => {
     }
   }, [cartItems]);
 
+  useEffect(() => {
+    setTotalValue(getTotals.rawPrice.toString());
+  }, [getTotals]);
+
   return (
     <>
       <Container>
@@ -110,7 +114,6 @@ const Checkout = () => {
           </Button>
           <PayPalButtons
             forceReRender={[totalValue]}
-            onClick={() => setTotalValue(getTotals.rawPrice.toString())}
             fundingSource="paypal"
             createOrder={(data, actions) => {
               return actions.order.create({
