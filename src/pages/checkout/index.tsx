@@ -112,21 +112,23 @@ const Checkout = () => {
           <Button onClick={handleGetOver}>
             {getOver ? "Finalizando..." : "Finalizar!"}
           </Button>
-          <PayPalButtons
-            forceReRender={[totalValue]}
-            fundingSource="paypal"
-            createOrder={(data, actions) => {
-              return actions.order.create({
-                purchase_units: [
-                  {
-                    amount: {
-                      value: totalValue,
+          {totalValue && (
+            <PayPalButtons
+              forceReRender={[totalValue]}
+              fundingSource="paypal"
+              createOrder={(data, actions) => {
+                return actions.order.create({
+                  purchase_units: [
+                    {
+                      amount: {
+                        value: totalValue,
+                      },
                     },
-                  },
-                ],
-              });
-            }}
-          />
+                  ],
+                });
+              }}
+            />
+          )}
           <PayPalButtons
             disabled
             fundingSource="card"
